@@ -22,11 +22,49 @@ public class JewelsAndStones {
 	 * The characters in J are distinct.
 	 */
 	public static void main(String[] args) {
-		System.out.println(numJewelsInStones("aA", "aAAbbbb"));
+		System.out.println(submit2("ngm", "kxg"));
+//		System.out.println(submit1("aA", "aAAbbbb"));
 	}
 	
-	public static int numJewelsInStones(String J, String S) {
+	public static int submit2(String J, String S) {
 		
-		return 0;
+        int count = 0;
+        char js[] = J.toCharArray();
+        
+        if (js.length >= 1) {
+            
+            int index = 0;
+            
+            for (char s : js) {
+                while ((index = S.indexOf(s, index)) != -1) {
+                	index++;
+                    count++;
+                }
+            }
+            return count;
+        } else {
+            return count;
+        }
+	}
+	
+	public static int submit1(String J, String S) {
+		
+        int count = 0;
+        char js[] = J.toCharArray();
+        
+        if (js.length >= 1) {
+            
+            int index = 0;
+            
+            for (char s : js) {
+                while (S.indexOf(s, index) != -1) {
+                	index++;
+                    count++;
+                }
+            }
+            return count;
+        } else {
+            return count;
+        }
 	}
 }

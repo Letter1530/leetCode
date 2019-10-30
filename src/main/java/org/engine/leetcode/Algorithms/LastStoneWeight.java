@@ -1,5 +1,7 @@
 package org.engine.leetcode.Algorithms;
 
+import java.util.Arrays;
+
 public class LastStoneWeight {
 
 	/**
@@ -33,7 +35,37 @@ public class LastStoneWeight {
 		System.out.println(submit1(stones));
 	}
 	
+	/**
+	 * Runtime: 16 ms, faster than 34.22% of Java online submissions for Last Stone Weight.
+	 * Memory Usage: 36.3 MB, less than 100.00% of Java online submissions for Last Stone Weight.
+	 * @param stones
+	 * @return
+	 * @Description
+	 * @author Letter1530(Engine) 2019年10月30日
+	 */
 	public static int submit1(int[] stones) {
-		return 0;
+		
+		int res = 0;
+		
+		if (stones.length > 1) {
+			for (int i = stones.length - 1; i >= 0; i--) {
+				
+				Arrays.sort(stones);
+				System.out.println("排序完stones:"+Arrays.toString(stones));
+				res = stones[stones.length-1] - stones[stones.length-2];
+				System.out.println("res:"+res);
+				if (res != 0) {
+					stones[stones.length-1] = 0;
+					stones[stones.length-2] = res;
+				} else {
+					stones[stones.length-1] = 0;
+					stones[stones.length-2] = 0;
+				}
+				System.out.println("stones:"+Arrays.toString(stones));
+			}
+		} else if (stones.length == 1){
+			res = stones[0];
+		} 
+		return res;
 	}
 }

@@ -26,6 +26,15 @@ public class JewelsAndStones {
 //		System.out.println(submit1("aA", "aAAbbbb"));
 	}
 	
+	/**
+	 * Runtime: 1 ms, faster than 94.51% of Java online submissions for Jewels and Stones.
+	 * Memory Usage: 34.4 MB, less than 100.00% of Java online submissions for Jewels and Stones.
+	 * @param J
+	 * @param S
+	 * @return
+	 * @Description
+	 * @author Letter1530(Engine) 2019年10月30日
+	 */
 	public static int submit2(String J, String S) {
 		
         int count = 0;
@@ -47,6 +56,14 @@ public class JewelsAndStones {
         }
 	}
 	
+	/**
+	 * wrong answer
+	 * @param J
+	 * @param S
+	 * @return
+	 * @Description
+	 * @author Letter1530(Engine) 2019年10月30日
+	 */
 	public static int submit1(String J, String S) {
 		
         int count = 0;

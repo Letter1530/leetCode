@@ -26,6 +26,15 @@ public class SingleNumber {
 		System.out.println(submit1(i));
 	}
 	
+	/**
+	 * 
+	 * Runtime: 0 ms, faster than 100.00% of Java online submissions for Single Number.
+	 * Memory Usage: 38.6 MB, less than 98.52% of Java online submissions for Single Number.
+	 * @param nums
+	 * @return
+	 * @Description
+	 * @author Letter1530(Engine) 2019年10月30日
+	 */
 	public static int submit1(int[] nums) {
         int res = 0;
         for (int i = 0; i < nums.length; i++) {
@@ -34,6 +43,14 @@ public class SingleNumber {
         return res;
 	}
 	
+	/**
+	 * Runtime: 35 ms, faster than 7.15% of Java online submissions for Single Number.
+	 * Memory Usage: 38.3 MB, less than 98.52% of Java online submissions for Single Number.
+	 * @param nums
+	 * @return
+	 * @Description
+	 * @author Letter1530(Engine) 2019年10月30日
+	 */
 	public static int submit2(int[] nums) {
 		return Arrays.stream(nums).reduce(0, (x,y) -> x^y);
 	}

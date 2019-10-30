@@ -36,6 +36,12 @@ public class LastStoneWeight {
 		System.out.println("3=" + submit1(stones3));
 		System.out.println("4=" + submit1(stones4));
 		System.out.println("5=" + submit1(stones5));
+
+		System.out.println("1_1=" + submit2(stones));
+		System.out.println("2_1=" + submit2(stones2));
+		System.out.println("3_1=" + submit2(stones3));
+		System.out.println("4_1=" + submit2(stones4));
+		System.out.println("5_1=" + submit2(stones5));
 	}
 
 	public static int submit1(int[] stones) {
@@ -76,6 +82,47 @@ public class LastStoneWeight {
 				}
 
 			}
+
+			for (int x = 1; x < stones.length; x++) {
+				for (int y = 0; y < stones.length; y++) {
+					if (stones[x] > stones[y]) {
+						temp = stones[x];
+						stones[x] = stones[y];
+						stones[y] = temp;
+					}
+				}
+			}
+
+			if (stones[1] == 0) {
+				return stones[0];
+			} else if (stones[0] == 0) {
+				return 0;
+			}
+		}
+
+	}
+
+	public static int submit2(int[] stones) {
+		// 判斷長度只有1的
+		if (stones.length == 1) {
+			return stones[0];
+		}
+
+		// 排序
+		for (int x = 1; x < stones.length; x++) {
+			for (int y = 0; y < stones.length; y++) {
+				if (stones[x] > stones[y]) {
+					int temp = stones[x];
+					stones[x] = stones[y];
+					stones[y] = temp;
+				}
+			}
+		}
+
+		while (true) {
+			int temp = stones[0];
+			stones[0] = 0;
+			stones[1] = temp - stones[1];
 
 			for (int x = 1; x < stones.length; x++) {
 				for (int y = 0; y < stones.length; y++) {

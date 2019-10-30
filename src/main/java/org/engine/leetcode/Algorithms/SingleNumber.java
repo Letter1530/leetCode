@@ -1,5 +1,7 @@
 package org.engine.leetcode.Algorithms;
 
+import java.util.Arrays;
+
 public class SingleNumber {
 
 	/**
@@ -26,7 +28,13 @@ public class SingleNumber {
 	
 	public static int submit1(int[] nums) {
         int res = 0;
-
+        for (int i = 0; i < nums.length; i++) {
+            res ^= nums[i] ;
+        }
         return res;
+	}
+	
+	public static int submit2(int[] nums) {
+		return Arrays.stream(nums).reduce(0, (x,y) -> x^y);
 	}
 }

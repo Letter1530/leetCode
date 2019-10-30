@@ -3,6 +3,10 @@ package org.engine.leetcode.Algorithms;
 public class JewelsAndStones {
 
 	/**
+	 * Runtime: 1 ms, faster than 94.51% of Java online submissions for Jewels and Stones. Memory
+	 * Usage: 34.6 MB, less than 100.00% of Java online submissions for Jewels and Stones.
+	 */
+	/**
 	 * You're given strings J representing the types of stones that are jewels, and S representing
 	 * the stones you have. Each character in S is a type of stone you have. You want to know how
 	 * many of the stones you have are also jewels. The letters in J are guaranteed distinct, and

@@ -1,5 +1,6 @@
 package org.engine.leetcode.Algorithms;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -7,7 +8,10 @@ import java.util.Map;
 
 
 public class SingleNumber {
-
+	/**
+	 * Runtime: 9 ms, faster than 17.18% of Java online submissions for Single Number. Memory Usage:
+	 * 38.5 MB, less than 98.52% of Java online submissions for Single Number.
+	 */
 	/**
 	 * Given a non-empty array of integers, every element appears twice except for one. Find that
 	 * single one.
@@ -62,5 +66,9 @@ public class SingleNumber {
 		System.out.println("list=" + list.toString());
 
 		return list.get(0);
+	}
+
+	public static int submit3(int[] nums) {
+		return Arrays.stream(nums).reduce(0, (x, y) -> x ^ y);
 	}
 }

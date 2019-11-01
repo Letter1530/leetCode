@@ -1,4 +1,4 @@
-package org.engine.leetcode.Algorithms;
+package org.hugh.Algorithms;
 
 import java.util.Arrays;
 

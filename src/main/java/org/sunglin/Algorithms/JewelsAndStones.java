@@ -1,4 +1,4 @@
-package org.sunglin.leetcode.Algorithms;
+package org.sunglin.Algorithms;
 
 public class JewelsAndStones {
 

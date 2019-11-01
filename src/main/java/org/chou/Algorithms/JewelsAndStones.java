@@ -1,4 +1,4 @@
-package org.chou.leetcode.Algorithms;
+package org.chou.Algorithms;
 
 public class JewelsAndStones {
 

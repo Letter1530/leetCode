@@ -1,4 +1,4 @@
-package org.engine.leetcode.Algorithms;
+package org.engine.Algorithms;
 
 import java.util.List;
 

@@ -17,68 +17,27 @@ public class JewelsAndStones {
 	 * distinct.
 	 */
 	public static void main(String[] args) {
-		System.out.println(submit2("ngm", "kxg"));
+		System.out.println(jewelsAndStones("ngm", "kxg"));
 		// System.out.println(submit1("aA", "aAAbbbb"));
 	}
 
 	/**
-	 * Runtime: 1 ms, faster than 94.51% of Java online submissions for Jewels and Stones. Memory
-	 * Usage: 34.4 MB, less than 100.00% of Java online submissions for Jewels and Stones.
-	 * 
-	 * @param J
-	 * @param S
-	 * @return
-	 * @Description
-	 * @author Letter1530(Engine) 2019年10月30日
+	 * Runtime: 1 ms, faster than 94.57% of Java online submissions for Jewels and Stones.
+	 * Memory Usage: 34.8 MB, less than 100.00% of Java online submissions for Jewels and Stones.
 	 */
-	public static int submit2(String J, String S) {
+	public static int jewelsAndStones(String J, String S) {
 
 		int count = 0;
-		char js[] = J.toCharArray();
-
-		if (js.length >= 1) {
-
-			int index = 0;
-
-			for (char s : js) {
-				while ((index = S.indexOf(s, index)) != -1) {
-					index++;
+		char j[] = J.toCharArray();
+		char s[] = S.toCharArray();
+		for(char jc : j) {
+			for(char js :s) {
+				if(jc == js) {
 					count++;
 				}
 			}
-			return count;
-		} else {
-			return count;
 		}
+		return count;
 	}
 
-	/**
-	 * wrong answer
-	 * 
-	 * @param J
-	 * @param S
-	 * @return
-	 * @Description
-	 * @author Letter1530(Engine) 2019年10月30日
-	 */
-	public static int submit1(String J, String S) {
-
-		int count = 0;
-		char js[] = J.toCharArray();
-
-		if (js.length >= 1) {
-
-			int index = 0;
-
-			for (char s : js) {
-				while (S.indexOf(s, index) != -1) {
-					index++;
-					count++;
-				}
-			}
-			return count;
-		} else {
-			return count;
-		}
-	}
 }

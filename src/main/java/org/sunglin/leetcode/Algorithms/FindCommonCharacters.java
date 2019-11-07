@@ -5,7 +5,10 @@ import java.util.List;
 
 
 public class FindCommonCharacters {
-
+	/**
+	 * Runtime: 11 ms, faster than 31.03% of Java online submissions for Find Common Characters.
+	 * Memory Usage: 39 MB, less than 51.72% of Java online submissions for Find Common Characters.
+	 */
 	/**
 	 * Given an array A of strings made only from lowercase letters, return a list of all characters
 	 * that show up in all strings within the list (including duplicates). For example, if a

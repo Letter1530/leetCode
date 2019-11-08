@@ -1,6 +1,9 @@
 package org.engine.Algorithms;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class FindCommonCharacters {
 
@@ -26,12 +29,56 @@ public class FindCommonCharacters {
 	 */
 	public static void main(String[] args) {
 		String[] aStrings = {"bella", "label", "roller"};
-//		String[] aStrings = {"cool", "lock", "cook"};
+//		String[] aStrings = { "cool", "lock", "cook" };
 		System.out.println(submit1(aStrings));
 	}
-	
+
+	/**
+	 * Runtime: 9 ms, faster than 34.26% of Java online submissions for Find Common Characters.
+	 * Memory Usage: 38.3 MB, less than 62.07% of Java online submissions for Find Common Characters.
+	 * @param A
+	 * @return
+	 * @Description
+	 * @author Letter1530(Engine) 2019年11月5日
+	 */
 	public static List<String> submit1(String[] A) {
+
+		List<String> list = new ArrayList<String>();
+		Map<Character, Integer> map = new HashMap<Character, Integer>();
 		
-		return null;
+		for (char c : A[0].toCharArray()) {
+			map.put(c, countMatches(A[0], c));
+		}
+		System.out.println("map:"+map);
+		for (int i = 1; i < A.length; i++) {
+			for (Map.Entry<Character, Integer> entry : map.entrySet()) {
+				
+				int x = countMatches(A[i], entry.getKey());
+				
+				if (entry.getValue() > x)
+					map.put(entry.getKey(), x);
+			}
+		}
+		
+		for (Map.Entry<Character, Integer> entry : map.entrySet()) {
+			for (int i = 0; i < entry.getValue(); i++) {
+				list.add(String.valueOf(entry.getKey()));
+			}
+		}
+		return list;
 	}
+	
+    public static int countMatches(CharSequence str, char ch) {
+        if (str == null || str.length() == 0) {
+            return 0;
+        }
+        int count = 0;
+        // We could also call str.toCharArray() for faster look ups but that would generate more garbage.
+        for (int i = 0; i < str.length(); i++) {
+            if (ch == str.charAt(i)) {
+                count++;
+            }
+        }
+        return count;
+    }
 }

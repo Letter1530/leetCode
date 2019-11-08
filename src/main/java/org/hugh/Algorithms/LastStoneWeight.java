@@ -1,10 +1,10 @@
 package org.hugh.Algorithms;
 
-import java.util.Arrays;
-
+import java.util.ArrayList;
+import java.util.List;
 
 public class LastStoneWeight {
-
+	
 	/**
 	 * We have a collection of rocks, each rock has a positive integer weight. Each turn, we choose
 	 * the two heaviest rocks and smash them together. Suppose the stones have weights x and y with
@@ -27,41 +27,60 @@ public class LastStoneWeight {
 	 */
 	public static void main(String[] args) {
 		int[] stones = { 2, 7, 4, 1, 8, 1 };
-		System.out.println(submit1(stones));
+		System.out.println(lastStoneWeight(stones));
 	}
-
+	
 	/**
-	 * Runtime: 16 ms, faster than 34.22% of Java online submissions for Last Stone Weight. Memory
-	 * Usage: 36.3 MB, less than 100.00% of Java online submissions for Last Stone Weight.
-	 * 
-	 * @param stones
-	 * @return
-	 * @Description
-	 * @author Letter1530(Engine) 2019年10月30日
+	 * Runtime: 2 ms, faster than 43.45% of Java online submissions for Last Stone Weight.
+	 * Memory Usage: 34.2 MB, less than 100.00% of Java online submissions for Last Stone Weight.
 	 */
-	public static int submit1(int[] stones) {
-
-		int res = 0;
-
-		if (stones.length > 1) {
-			for (int i = stones.length - 1; i >= 0; i--) {
-
-				Arrays.sort(stones);
-				System.out.println("排序完stones:" + Arrays.toString(stones));
-				res = stones[stones.length - 1] - stones[stones.length - 2];
-				System.out.println("res:" + res);
-				if (res != 0) {
-					stones[stones.length - 1] = 0;
-					stones[stones.length - 2] = res;
-				} else {
-					stones[stones.length - 1] = 0;
-					stones[stones.length - 2] = 0;
-				}
-				System.out.println("stones:" + Arrays.toString(stones));
-			}
-		} else if (stones.length == 1) {
-			res = stones[0];
+	public static int lastStoneWeight(int[] stones) {
+        List<Integer> swList = new ArrayList<>();
+		for (int is : stones) {
+			swList.add(is);
 		}
-		return res;
-	}
+		Integer big = 0;
+		Integer small = 0;
+		while (swList.size() > 1) {
+			int biggestIndex = 0;
+			int sexondBigIndex = 0;
+			if (swList.get(0) < swList.get(1)) {
+				biggestIndex = 1;
+				sexondBigIndex = 0;
+				big = swList.get(1);
+				small = swList.get(0);
+			} else {
+				biggestIndex = 0;
+				sexondBigIndex = 1;
+				big = swList.get(0);
+				small = swList.get(1);
+			}
+
+			if (swList.size() > 2) {
+				for (int i = 2; i < swList.size(); i++) {
+					if (swList.get(i) >= big) {
+						small = big;
+						big = swList.get(i);
+						sexondBigIndex = biggestIndex;
+						biggestIndex = i;
+					}
+					if (swList.get(i) >= small && swList.get(i) < big) {
+						small = swList.get(i);
+						sexondBigIndex = i;
+					}
+				}
+			}
+			if(biggestIndex > sexondBigIndex) {
+				swList.remove(biggestIndex);
+				swList.remove(sexondBigIndex);
+			}else {
+				swList.remove(sexondBigIndex);
+				swList.remove(biggestIndex);
+			}
+			swList.add(big - small);
+			big = 0;
+			small = 0;
+		}
+        return swList.get(0);
+    }
 }

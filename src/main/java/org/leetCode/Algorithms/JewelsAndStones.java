@@ -1,4 +1,4 @@
-package org.hugh.leetcode.Algorithms;
+package org.leetCode.Algorithms;
 
 public class JewelsAndStones {
 
@@ -17,27 +17,12 @@ public class JewelsAndStones {
 	 * distinct.
 	 */
 	public static void main(String[] args) {
-		System.out.println(jewelsAndStones("ngm", "kxg"));
-		// System.out.println(submit1("aA", "aAAbbbb"));
+		System.out.println(submit1("aA", "aAAbbbb"));
 	}
-
-	/**
-	 * Runtime: 1 ms, faster than 94.57% of Java online submissions for Jewels and Stones.
-	 * Memory Usage: 34.8 MB, less than 100.00% of Java online submissions for Jewels and Stones.
-	 */
-	public static int jewelsAndStones(String J, String S) {
+	public static int submit1(String J, String S) {
 
 		int count = 0;
-		char j[] = J.toCharArray();
-		char s[] = S.toCharArray();
-		for(char jc : j) {
-			for(char js :s) {
-				if(jc == js) {
-					count++;
-				}
-			}
-		}
+		
 		return count;
 	}
-
 }

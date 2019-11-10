@@ -1,7 +1,6 @@
 package org.hugh.Algorithms;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class SingleNumber {
@@ -34,9 +33,9 @@ public class SingleNumber {
 	}
 
 	/**
-	 * Runtime: 256 ms, faster than 5.02% of Java online submissions for Single Number.
-	 * Memory Usage: 40.7 MB, less than 74.08% of Java online submissions for Single Number.
-	 * for Single Number.
+	 * Runtime: 256 ms, faster than 5.02% of Java online submissions for Single
+	 * Number. Memory Usage: 40.7 MB, less than 74.08% of Java online submissions
+	 * for Single Number. for Single Number.
 	 */
 	public static int singleNumber(int[] nums) {
 		List<Integer> smList = new ArrayList<>();

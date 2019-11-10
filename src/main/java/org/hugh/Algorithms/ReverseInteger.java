@@ -1,8 +1,5 @@
 package org.hugh.Algorithms;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class ReverseInteger {
 
 	/*

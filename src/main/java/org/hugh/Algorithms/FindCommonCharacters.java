@@ -43,7 +43,6 @@ public class FindCommonCharacters {
 		}
 		char[] shortestCharArr = A[index].toCharArray();/* 從長度最短的字串當基準開始查 */
 		for (char ch : shortestCharArr) {
-			int count = 0;
 			boolean isFound = false;/* 這個字元有沒有在這個字串被找到 */
 			for (int i = 0; i < A.length; i++) {
 				int thiscount = 0;
@@ -51,7 +50,6 @@ public class FindCommonCharacters {
 				for (char ch1 : thisStrArr) {
 					if (ch == ch1) {
 						thiscount++;
-						count++;
 						isFound = true;
 					}
 				}

@@ -37,7 +37,7 @@ public class ValidParentheses {
 	
 	/*
 	 * Runtime: 11 ms, faster than 5.13% of Java online submissions for Valid Parentheses.
-	 * Memory Usage: 36.1 MB, less than 6.33% of Java online submissions
+	 * Memory Usage: 35.7 MB, less than 21.52% of Java online submissions
 	 * for Valid Parentheses.
 	 */
 	public static boolean isValid(String s) {
@@ -55,10 +55,14 @@ public class ValidParentheses {
 		int index = 0;
 		for (String str: s.split("")) {
 			sList.add(str);
-			if (sList.size() > 1 && map.get(sList.get(index)) + map.get(sList.get(index - 1)) == 0) {
-				sList.remove(index);
-				sList.remove(index - 1);
-				index-= 2;
+			if (map.get(sList.get(index)) < 0 && sList.size() > 1) {
+				if (map.get(sList.get(index)) + map.get(sList.get(index - 1)) != 0) {
+					return false;
+				} else {
+					sList.remove(index);
+					sList.remove(index - 1);
+					index-= 2;
+				}
 			}
 			index++;
 		}

@@ -3,7 +3,7 @@ package org.hugh.Algorithms;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LastStoneWeight {
+public class LC_1046_LastStoneWeight {
 	
 	/**
 	 * We have a collection of rocks, each rock has a positive integer weight. Each turn, we choose

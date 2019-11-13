@@ -1,6 +1,6 @@
 package org.hugh.Algorithms;
 
-public class ReverseInteger {
+public class LC_0007_ReverseInteger {
 
 	/*
 	 * Given a 32-bit signed integer, reverse digits of an integer.

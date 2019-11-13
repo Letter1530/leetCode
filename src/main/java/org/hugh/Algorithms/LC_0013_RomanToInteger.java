@@ -2,7 +2,7 @@ package org.hugh.Algorithms;
 
 import java.util.HashMap;
 
-public class RomanToInteger {
+public class LC_0013_RomanToInteger {
 	/*
 	 * Roman numerals are represented by seven different symbols: I, V, X, L, C, D
 	 * and M.

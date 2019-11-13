@@ -3,7 +3,7 @@ package org.hugh.Algorithms;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FindCommonCharacters {
+public class LC_1002_FindCommonCharacters {
 
 	/**
 	 * Given an array A of strings made only from lower case letters, return a list

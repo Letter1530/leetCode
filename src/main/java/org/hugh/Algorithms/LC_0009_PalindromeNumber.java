@@ -1,6 +1,6 @@
 package org.hugh.Algorithms;
 
-public class PalindromeNumber {
+public class LC_0009_PalindromeNumber {
 	/*
 	 * Determine whether an integer is a palindrome. An integer is a palindrome when
 	 * it reads the same backward as forward.

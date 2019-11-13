@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class ValidParentheses {
+public class LC_0020_ValidParentheses {
 	/*
 	 * Given a string containing just the characters '(', ')', '{', '}', '[' and
 	 * ']', determine if the input string is valid.

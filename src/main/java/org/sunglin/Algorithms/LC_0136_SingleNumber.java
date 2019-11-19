@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 
-public class SingleNumber {
+public class LC_0136_SingleNumber {
 	/**
 	 * Runtime: 9 ms, faster than 17.18% of Java online submissions for Single Number. Memory Usage:
 	 * 38.5 MB, less than 98.52% of Java online submissions for Single Number.

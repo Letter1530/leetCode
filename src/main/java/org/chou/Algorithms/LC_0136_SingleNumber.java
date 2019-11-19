@@ -3,7 +3,7 @@ package org.chou.Algorithms;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SingleNumber {
+public class LC_0136_SingleNumber {
 
 	/**
 	 * Given a non-empty array of integers, every element appears twice except for

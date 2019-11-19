@@ -1,10 +1,10 @@
-package org.sunglin.leetcode.Algorithms;
+package org.sunglin.Algorithms;
 
 import java.util.LinkedList;
 import java.util.List;
 
 
-public class FindCommonCharacters {
+public class LC_FindCommonCharacters {
 	/**
 	 * Runtime: 11 ms, faster than 31.03% of Java online submissions for Find Common Characters.
 	 * Memory Usage: 39 MB, less than 51.72% of Java online submissions for Find Common Characters.

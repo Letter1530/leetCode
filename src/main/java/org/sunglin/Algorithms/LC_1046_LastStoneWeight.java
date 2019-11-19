@@ -1,6 +1,6 @@
 package org.sunglin.Algorithms;
 
-public class LastStoneWeight {
+public class LC_1046_LastStoneWeight {
 	/**
 	 * Runtime: 1 ms, faster than 96.22% of Java online submissions for Last Stone Weight. Memory
 	 * Usage: 33.9 MB, less than 100.00% of Java online submissions for Last Stone Weight.

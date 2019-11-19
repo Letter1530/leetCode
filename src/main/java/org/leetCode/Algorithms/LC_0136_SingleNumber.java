@@ -1,9 +1,6 @@
-package org.engine.Algorithms;
+package org.leetCode.Algorithms;
 
-import java.util.Arrays;
-
-
-public class SingleNumber {
+public class LC_0136_SingleNumber {
 
 	/**
 	 * Given a non-empty array of integers, every element appears twice except for one. Find that
@@ -29,7 +26,7 @@ public class SingleNumber {
 	 * 
 	 * @param nums
 	 * @return
-	 * @Description
+	 * @Description 用XOR應該是最佳解
 	 * @author Letter1530(Engine) 2019年10月30日
 	 */
 	public static int submit1(int[] nums) {
@@ -38,18 +35,5 @@ public class SingleNumber {
 			res ^= nums[i];
 		}
 		return res;
-	}
-
-	/**
-	 * Runtime: 35 ms, faster than 7.15% of Java online submissions for Single Number. Memory Usage:
-	 * 38.3 MB, less than 98.52% of Java online submissions for Single Number.
-	 * 
-	 * @param nums
-	 * @return
-	 * @Description
-	 * @author Letter1530(Engine) 2019年10月30日
-	 */
-	public static int submit2(int[] nums) {
-		return Arrays.stream(nums).reduce(0, (x, y) -> x ^ y);
 	}
 }

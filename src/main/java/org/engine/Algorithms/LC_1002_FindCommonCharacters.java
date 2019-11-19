@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class FindCommonCharacters {
+public class LC_1002_FindCommonCharacters {
 
 	/**
 	 * Given an array A of strings made only from lowercase letters, return a list

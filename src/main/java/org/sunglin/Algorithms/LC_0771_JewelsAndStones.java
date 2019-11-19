@@ -1,6 +1,6 @@
 package org.sunglin.Algorithms;
 
-public class JewelsAndStones {
+public class LC_0771_JewelsAndStones {
 
 	/**
 	 * Runtime: 1 ms, faster than 94.51% of Java online submissions for Jewels and Stones. Memory

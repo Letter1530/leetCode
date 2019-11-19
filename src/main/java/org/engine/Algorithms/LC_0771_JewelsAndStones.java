@@ -1,6 +1,6 @@
 package org.engine.Algorithms;
 
-public class JewelsAndStones {
+public class LC_0771_JewelsAndStones {
 
 	/**
 	 * You're given strings J representing the types of stones that are jewels, and S representing

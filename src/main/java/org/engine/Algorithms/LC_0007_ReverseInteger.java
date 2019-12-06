@@ -25,6 +25,7 @@ public class LC_0007_ReverseInteger {
      * Runtime: 1 ms, faster than 100% of Java online submissions for Reverse
      * Integer. Memory Usage: 33.5 MB, less than 11.66% of Java online submissions
      * for Reverse Integer.
+     * 這題我這樣寫應該是最佳解
      */
     public static int reverseInt(int x) {
 

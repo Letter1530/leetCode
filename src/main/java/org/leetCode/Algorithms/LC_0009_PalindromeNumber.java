@@ -13,6 +13,9 @@ public class LC_0009_PalindromeNumber {
 	 * 
 	 * Example 3: Input: 10 Output: false Explanation: Reads 01 from right to left.
 	 * Therefore it is not a palindrome.
+	 *
+	 * Follow up:
+	 * Coud you solve it without converting the integer to a string?
 	 **/
 
 	public static void main(String[] args) {

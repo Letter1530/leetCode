@@ -7,35 +7,41 @@ import java.util.Arrays;
 @Slf4j
 public class LC_0013_RomanToInteger {
 
-    /*
+    /**
      * Roman numerals are represented by seven different symbols: I, V, X, L, C, D
      * and M.
-     *
+     * <p>
      * Given a roman numeral, convert it to an integer. Input is guaranteed to be
      * within the range from 1 to 3999.
-     *
+     * <p>
      * Example 1:
      * Input: "III"
      * Output: 3
-     *
+     * <p>
      * Example 2:
      * Input: "IV"
      * Output: 4
-     *
+     * <p>
      * Example 3:
      * Input: "IX"
      * Output: 9
-     *
+     * <p>
      * Example 4:
      * Input: "LVIII"
      * Output: 58
      * Explanation: L = 50, V= 5, III = 3.
-     *
+     * <p>
      * Example 5:
      * Input: "MCMXCIV"
      * Output: 1994
      * Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
-     */
+     *
+     * @return void
+     * @Author BugDeveloper
+     * @Description
+     * @Date 下午 04:15 2020/5/8
+     * @Param [args]
+     **/
     public static void main(String[] args) {
 //        String num = "III";
 //        String num = "IV";
@@ -45,10 +51,16 @@ public class LC_0013_RomanToInteger {
         System.out.println(romanToInt(num));
     }
 
-    /*
+    /**
      * Runtime: 7 ms, faster than 20.81% of Java online submissions for Roman to Integer.
      * Memory Usage: 40.2 MB, less than 5.48% of Java online submissions for Roman to Integer.
-     */
+     *
+     * @Author BugDeveloper
+     * @Description
+     * @Date 下午 04:17 2020/5/8
+     * @Param [s]
+     * @return int
+     **/
     public static int romanToInt(String s) {
 
         String[] arr1 = {"C", "D", "I", "L", "M", "V", "X"};

@@ -46,26 +46,40 @@ public class LC_0035_SearchInsertPosition {
      * Memory Usage: 40.4 MB, less than 5.41% of Java online submissions
      * for Search Insert Position.
      */
+//    public static int searchInsert(int[] nums, int target) {
+//
+//        if (nums.length == 0)
+//            return 0;
+//
+//        int i = Arrays.binarySearch(nums, target); // 如果nums裡面找的到target就直接回傳了
+//        if (i < 0) {
+//        	int y = 0;
+//        	for (int x : nums) { // NOTE:這邊可以這樣寫是因為題目已經說nums是由小到大排序的
+//        		if (x > target) { // 找出nums裡第一個比target大的int
+//        			y = x;
+//					break;
+//				}
+//			}
+//        	if (y != 0)
+//        		i = Arrays.binarySearch(nums, y);
+//        	else
+//        		i = nums.length; // i = nums.length是因為nums裡面可能每個值都比target小,所以nums.length就是target應該在的地方
+//		}
+//        return i;
+//    }
+
+//---------------------------------------Hugh的解法---------------------------------------
     public static int searchInsert(int[] nums, int target) {
-
-        if (nums.length == 0)
+        if (nums.length == 0) {
             return 0;
-
-        int i = Arrays.binarySearch(nums, target); // 如果nums裡面找的到target就直接回傳了
-        if (i < 0) {
-        	int y = 0;
-        	for (int x : nums) { // NOTE:這邊可以這樣寫是因為題目已經說nums是由小到大排序的
-        		if (x > target) { // 找出nums裡第一個比target大的int
-        			y = x;
-					break;
-				}
-			}
-        	if (y != 0)
-        		i = Arrays.binarySearch(nums, y);
-        	else
-        		i = nums.length; // i = nums.length是因為nums裡面可能每個值都比target小,所以nums.length就是target應該在的地方
-		}
-        return i;
+        }
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] >= target) {
+                return i;
+            }
+        }
+        return nums.length;
     }
-
+    //哎呀,我真的不該用foreach的,Hugh的解法好多了
+//---------------------------------------Hugh的解法---------------------------------------
 }

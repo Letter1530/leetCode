@@ -22,7 +22,7 @@ public class UnitTest {
     public void test1() {
         int i = 0;
         int j = 0;
-        log.info("i:{},j:{}", i, j);
+        log.info("i:" + i + ",j:" + j);
         int a = i++;
         int b = ++j;
         log.info("a:{},b:{}", a, b);

@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
-public class LC_0002_AddTwoNumbersTest {
+public class LC0002AddTwoNumbersTest {
 
     private final LC_0002_AddTwoNumbers lc0002 = new LC_0002_AddTwoNumbers();
 
